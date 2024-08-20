@@ -33,7 +33,7 @@ export async function getServerSideProps({ res }) {
   const pages = ['', 'about', 'articles', 'contact', 'projects', ...articles.map((a) => a.slug)];
 
   // We generate the XML sitemap with the posts data
-  const sitemap = generateSiteMap(posts);
+  const sitemap = generateSiteMap(pages);
 
   res.setHeader('Content-Type', 'text/xml');
   // we send the XML to the browser
